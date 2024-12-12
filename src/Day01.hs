@@ -1,10 +1,14 @@
 module Day01 where
 
-import Paths_aoc2023 (getDataFileName)
+import Text.Regex.PCRE ((=~))
+
+import Paths_aoc2024 (getDataFileName)
+
+pattern :: String
+pattern = "CGGTAC"
 
 day01 :: IO ()
 day01 = do
-  inputLines <- lines <$> (getDataFileName "day01-input.txt" >>= readFile)
-  putStrLn "This is what I read from input:"
-  putStrLn $ unlines inputLines
-  putStrLn "TODO: implement Day 01"
+  input <- getDataFileName "day01-input.txt" >>= readFile
+  let matches = input =~ pattern :: [[String]]
+  print (length matches)

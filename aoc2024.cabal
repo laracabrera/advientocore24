@@ -56,8 +56,10 @@ executable aoc2023
       base ^>=4.17.2.0
       , regex-pcre
       , hashmap
-    -- -- Package `split`: Functions for splitting lists.
-    -- , split ^>=0.2.4
+      -- A library for digital signal processing
+      , hmatrix
+    -- Package `split`: Functions for splitting lists.
+    , split ^>=0.2.4
     -- -- Package `containers`: Brings maps, sets, trees, graphs, sequences.
     -- , containers ^>=0.7
     -- -- Package `vector`: Performant, fixed length arrays.
